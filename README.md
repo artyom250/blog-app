@@ -9,7 +9,7 @@ Visually delighted blog application built with Node.js and MongoDB for database,
 * Responsive Design
 * Forms
 * Full CRUD functionality
-* Search fillter
+* Search filter
 * CSS Grid
 * Responsive navigation
 
