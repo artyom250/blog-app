@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update | <%= update.title %></title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/read.css">
+    <link rel="stylesheet" href="/update.css">
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="read">
+        <form class="update" action="/update/<%= update._id %>" method="POST">
+            <center><h2>Update article</h2></center>
+            <input type="hidden" name="_method" value="PUT">
+            <input type="hidden" name="id" value="<%= update._id %>">
+            <input type="text" name="title" placeholder="Update your title" value="<%= update.title %>" required>
+            <input type="text" name="author" placeholder="Update your author" value="<%= update.author %>" required>
+            <textarea name="desc" placeholder="Update your article" required><%= update.desc %></textarea>
+            <button type="submit">
+                <i class='bx bx-edit'></i>
+                <span>Update article</span>
+            </button>
+        </form>        
+    </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Application | <%= blog.title %></title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/read.css">
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="read">
+        <div class="blog read-blog">
+            <p class="title"><%= blog.title %></p>
+            <p class="author"><%= blog.author %></p>
+            <p class="blog-text"><%= blog.desc %></p>
+            <div class="links">
+                <a href="/" class="read">
+                    <i class='bx bx-left-arrow-circle'></i>
+                    <span>More articles</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

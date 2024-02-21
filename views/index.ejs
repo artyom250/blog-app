@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Application | Homepage</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="home">
+        <form class="search" action="/" method="GET">
+            <input type="text" name="q" placeholder="Search by title, author or article..." required>
+            <button type="submit">
+                <i class='bx bx-search'></i>
+                <span>Search</span>
+            </button>
+            <a href="/create" class="create">
+                <i class='bx bx-plus-circle'></i>
+                <span>Create</span>
+            </a>
+        </form>        
+        <div class="blogs">
+            <% blogs.forEach(function(blog) { %>
+                <div class="blog">
+                    <p class="title"><%= blog.title %></p>
+                    <p class="author"><%= blog.author %></p>
+                    <p class="desc"><%= blog.desc %></p>
+                    <div class="links">
+                        <a href="/read/<%= blog._id %>" class="read">Read</a>
+                        <a href="/update/<%= blog._id %>" class="read up">Update</a>
+                        <form action="/<%= blog._id %>" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" class="read del">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+</body>
+</html>

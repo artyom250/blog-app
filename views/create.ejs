@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Application | Add Blog</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/read.css">
+    <link rel="stylesheet" href="/update.css">
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <section id="read">
+        <form class="update" action="/create" method="POST">
+            <center><h2>Create article</h2></center>
+            <input type="text" name="title" placeholder="Update your title" required>
+            <input type="text" name="author" placeholder="Update your author" required>
+            <textarea name="desc" placeholder="Update your article" required></textarea>
+            <button type="submit">
+                <i class='bx bx-plus-circle'></i>
+                <span>Create article</span>
+            </button>
+        </form>        
+    </section>
+</body>
+</html>
