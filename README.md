@@ -30,11 +30,6 @@ Head into your folder and clone the repo by typing these comands in your termina
 ```bash
 git clone https://github.com/artyom250/blog-app.git
 cd blog-app
-```
-
-Also, make sure to install all the packages used in the project to successfully run the application:
-
-```bash
-npm install body-parser ejs express mongoose
+npm install
 node index
 ```
